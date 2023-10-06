@@ -65,13 +65,13 @@ export default function Product() {
     navigate({ search: `?${query}` });
   };
 
-  const handleRadioFilterChange=(e,sectionId)=>{
-    const searchParamms=new URLSearchParams(location.search);
+  const handleRadioFilterChange = (e, sectionId) => {
+    const searchParamms = new URLSearchParams(location.search);
 
-    searchParamms.set(sectionId,e.target.value);
+    searchParamms.set(sectionId, e.target.value);
     const query = searchParamms.toString();
     navigate({ search: `?${query}` });
-  }
+  };
 
   return (
     <div className="bg-white">
@@ -305,9 +305,6 @@ export default function Product() {
                           </h3>
                           <Disclosure.Panel className="pt-6">
                             <div className="space-y-4">
-
-
-
                               <FormControl>
                                 <RadioGroup
                                   aria-labelledby="demo-radio-buttons-group-label"
@@ -316,7 +313,10 @@ export default function Product() {
                                 >
                                   {section.options.map((option, optionIdx) => (
                                     <>
-                                      <FormControlLabel onClick={(e)=>handleRadioFilterChange(e,section.id)}
+                                      <FormControlLabel
+                                        onClick={(e) =>
+                                          handleRadioFilterChange(e, section.id)
+                                        }
                                         value={option.value}
                                         control={<Radio />}
                                         label={option.label}
@@ -325,9 +325,6 @@ export default function Product() {
                                   ))}
                                 </RadioGroup>
                               </FormControl>
-
-
-
                             </div>
                           </Disclosure.Panel>
                         </>
