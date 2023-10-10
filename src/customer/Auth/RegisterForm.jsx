@@ -25,6 +25,7 @@ const RegisterForm = () => {
       firstName: data.get("firstName"),
       lastName: data.get("lastName"),
       email: data.get("email"),
+      mobile:data.get("mobile"),
       password: data.get("password"),
     };
 
@@ -71,7 +72,7 @@ const RegisterForm = () => {
               required
               id="mobile"
               name="mobile"
-              label="Mobile Number"
+              label="Phone Number"
               fullWidth
               autoComplete="given-name"
             />
