@@ -246,7 +246,12 @@ export default function ProductDetails() {
                 <Button
                   onClick={handleAddToCart}
                   variant="contained"
-                  sx={{ px: "2rem", py: "1rem", bgcolor: "#9155fd" }}
+                  sx={{
+                    px: "2rem",
+                    py: "1rem",
+                    bgcolor: "#9155fd",
+                    marginTop: "20px",
+                  }}
                 >
                   Add To Cart
                 </Button>

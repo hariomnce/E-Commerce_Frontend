@@ -42,6 +42,16 @@ export default function Product() {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const decodedQureyString = decodeURIComponent(location.search);
+  const searchParamms = new URLSearchParams(decodedQureyString);
+  const colorValue = searchParamms.get("color");
+  const sizeValue = searchParamms.get("size");
+  const priceValue = searchParamms.get("price");
+  const discount = searchParamms.get("discount");
+  const sortValue = searchParamms.get("sort");
+  const pageNumber = searchParamms.get("page") || 1;
+  const stock = searchParamms.get("stock");
+
   const handleFilter = (value, sectionId) => {
     const searchParamms = new URLSearchParams(location.search);
     let filterValue = searchParamms.getAll(sectionId);
